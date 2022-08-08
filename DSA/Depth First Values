@@ -1,5 +1,4 @@
 const depthFirstValues = (root) => {
-  // todo
   let result = []
   let stack = root ? [root] : []
   while(stack.length !== 0){
