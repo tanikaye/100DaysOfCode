@@ -1,0 +1,13 @@
+const depthFirstValues = (root) => {
+  // todo
+  let result = []
+  let stack = root ? [root] : []
+  while(stack.length !== 0){
+      let current = stack.pop()
+      console.log("current is: ", current)
+      result.push(current.val)
+     if(current.right) stack.push(current.right)
+     if(current.left) stack.push(current.left)
+ }
+  return result
+};
