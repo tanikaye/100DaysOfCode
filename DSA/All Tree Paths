@@ -1,0 +1,21 @@
+const allTreePaths = (root) => {
+  // todo
+  console.log(root.val)
+let array = []
+// if(root === null) return array;
+  if(root.left === null && root.right === null) return [[root.val]]
+  else if(root.left !== null && root.right !== null) {
+  let arrayLeft = allTreePaths(root.left)
+
+  let arrayRight = allTreePaths(root.right)
+    array = arrayLeft.concat(arrayRight)
+  }
+    else if(root.left === null) array = allTreePaths(root.right)
+    else if(root.right === null) array = allTreePaths(root.left)
+
+
+  for(let subArray of array){
+    subArray.unshift(root.val)
+}
+  return array
+};
