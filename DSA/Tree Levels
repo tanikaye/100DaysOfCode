@@ -1,5 +1,4 @@
 const treeLevels = (root) => {
-  // todo
   if(root === null) return []
  let queue = [root, 0]
  let array = []
