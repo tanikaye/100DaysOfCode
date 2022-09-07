@@ -1,0 +1,19 @@
+const treeLevels = (root) => {
+  // todo
+  if(root === null) return []
+ let queue = [root, 0]
+ let array = []
+ let level = 0
+ while(queue.length > 0){
+   let current = [queue.pop(), level]
+   console.log("its the cur ", current)
+   if(array[current[1]] !== undefined){
+     array[current[1]].push(current[0])
+   } else {
+     array.push([current[0]])
+   }
+   if(current.left) queue.unshift([current.left.val, level])
+   if(current.right)queue.unshift([current.left.val, level])
+ }
+  return array
+};
