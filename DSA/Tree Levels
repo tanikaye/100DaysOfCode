@@ -1,18 +1,22 @@
 const treeLevels = (root) => {
   if(root === null) return []
- let queue = [root, 0]
+ let queue = [[root, 0]]
  let array = []
  let level = 0
+
  while(queue.length > 0){
-   let current = [queue.pop(), level]
+   let current = queue.pop()
    console.log("its the cur ", current)
    if(array[current[1]] !== undefined){
-     array[current[1]].push(current[0])
+     array[current[1]].push(current[0].val)
    } else {
-     array.push([current[0]])
+     array.push([current[0].val])
    }
-   if(current.left) queue.unshift([current.left.val, level])
-   if(current.right)queue.unshift([current.left.val, level])
+      // console.log("its the array", array)
+   // console.log("its the cur", current)
+   if(current[0].left) queue.unshift([current[0].left, current[1]+1])
+   if(current[0].right) queue.unshift([current[0].right, current[1]+1])
+         console.log("its the q", queue)
  }
   return array
 };
