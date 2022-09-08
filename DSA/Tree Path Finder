@@ -1,0 +1,18 @@
+if(root === null) return null
+  if(root.val === target) return [root.val]
+  let leftPath = pathFinder(root.left, target)
+  let rightPath = pathFinder(root.right, target)
+  console.log("lefty", leftPath)
+  console.log("righty", rightPath)
+
+  if(leftPath){
+    if(leftPath.includes(target)){
+      return [root.val, ...leftPath]
+    }
+  }
+    if(rightPath){
+    if(rightPath.includes(target)){
+      return [root.val, ...rightPath]
+    }
+  }
+return null
