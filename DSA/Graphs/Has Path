@@ -1,5 +1,4 @@
 const hasPath = (graph, src, dst) => {
-  // todo
 let stack = [src]
 while(stack.length > 0){
     let current = stack.pop()
