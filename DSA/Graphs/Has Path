@@ -1,0 +1,13 @@
+const hasPath = (graph, src, dst) => {
+  // todo
+let stack = [src]
+while(stack.length > 0){
+    let current = stack.pop()
+    if(current === dst)return true
+    for(var neighbor of graph[current]){
+    stack.push(neighbor)
+  }
+}
+
+  return false
+};
