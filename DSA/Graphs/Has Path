@@ -1,3 +1,4 @@
+// recursive
 const hasPath = (graph, src, dst) => {
 let stack = [src]
 while(stack.length > 0){
@@ -8,5 +9,16 @@ while(stack.length > 0){
   }
 }
 
+  return false
+};
+
+// iterative
+const hasPath = (graph, src, dst) => {
+  // todo
+      if(src === dst) return true
+
+  for(let neighbor of graph[src]){
+     if(hasPath(graph, neighbor, dst)) return true
+  }
   return false
 };
