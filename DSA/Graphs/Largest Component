@@ -1,5 +1,4 @@
 const largestComponent = (graph) => {
-  // todo
   let largest = 0
   let visited = new Set()
   for(var node in graph){
