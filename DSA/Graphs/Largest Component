@@ -1,0 +1,20 @@
+const largestComponent = (graph) => {
+  // todo
+  let largest = 0
+  let visited = new Set()
+  for(var node in graph){
+    let finalSize = explore(graph, node, visited)
+     largest = Math.max(finalSize, largest)
+  }
+  return largest
+}
+let size;
+const explore = (graph, current, visited) => {
+  if(visited.has(current)) return false
+  visited.add(current)
+  let size  = 1
+    for(var neighbor of graph[current]){
+       size += explore(graph, neighbor, visited)
+  }
+  return size
+}
