@@ -16,8 +16,6 @@ let queue = [[nodeA, 0]]
           visited.add(neighbor)
           console.log(queue)
         }
-
-        // console.log(queue)
       }
   }
   if(noPath)return -1
