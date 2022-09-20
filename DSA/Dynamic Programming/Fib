@@ -1,5 +1,5 @@
 const fib = (n) => {
-  // todo
+
   if(n == 0)return 0
   return recurse([0,1], n)
 };
