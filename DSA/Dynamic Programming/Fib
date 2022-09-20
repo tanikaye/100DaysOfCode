@@ -1,0 +1,13 @@
+const fib = (n) => {
+  // todo
+  if(n == 0)return 0
+  return recurse([0,1], n)
+};
+
+const recurse = (array, n) => {
+  while(array.length <= n){
+    array.push(array[array.length-1]+array[array.length-2])
+  recurse(array)
+  }
+  return array[array.length-1]
+}
