@@ -1,0 +1,11 @@
+const sumPossible = (amount, numbers, memo={}) => {
+  if(amount === 0)return true
+  if(memo[amount] !== undefined) return false
+  memo[amount] = false
+  for(let num of numbers){
+    if(num <= amount){
+       if(sumPossible(amount-num, numbers, memo))return true
+    }
+}
+  return false
+};
