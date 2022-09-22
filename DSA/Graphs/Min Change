@@ -1,0 +1,22 @@
+const minChange = (amount, coins) => {
+let donezo = change(amount, coins, memo={})
+if(donezo === Infinity) return -1
+  return donezo
+
+};
+
+const change = (amount, coins, memo) => {
+   if(amount in memo) return memo[amount]
+  if(amount in memo) return false
+  if(amount === 0) return 0
+  if(amount < 0) return Infinity
+  let minCoins = Infinity
+  for(let coin of coins){
+
+    let numCoins = 1 + change(amount-coin, coins, memo)
+     minCoins = Math.min(numCoins, minCoins)
+
+  }
+  memo[amount] = minCoins
+  return minCoins
+}
