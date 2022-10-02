@@ -1,1 +1,4 @@
 max_number_of_players = 1.024E18 == 1,024,000,000,000,000,000
+
+// explanation: in order to write a number in scientific notation, you must
+// the number of zeros fter the letter e, and omit the zeros.
