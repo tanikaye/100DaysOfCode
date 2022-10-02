@@ -4,6 +4,4 @@ player_health = 156
 
 player_health += 10
 
-# don't touch below this line
-
 print(player_health)
