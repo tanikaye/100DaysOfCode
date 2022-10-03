@@ -1,0 +1,14 @@
+# Return if the bartender should serve a drink or not
+
+def should_serve_customer(customer_age, on_break, time):
+    return time >= 5 and time <= 10 and on_break == False and customer_age >= 21
+
+
+# don't touch below this line
+
+
+def test(customer_age, on_break, time):
+    should_serve = should_serve_customer(customer_age, on_break, time)
+    print(
+        f"age={customer_age}, on_break={on_break}, time={time}: should_serve={should_serve}"
+    )
