@@ -1,3 +1,6 @@
+// this function waits one second, execiteds the function call,
+// and keeps the result in a promise using the await keyord
+
 const message = await applyDamage(25, 50)
 
 console.log(message)
