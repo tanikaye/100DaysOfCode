@@ -1,6 +1,5 @@
 const message = await applyDamage(25, 50)
 
-
 console.log(message)
 
 function applyDamage(damage, currentHP) {
