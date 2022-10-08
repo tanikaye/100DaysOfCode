@@ -1,6 +1,6 @@
 async function updateUser(baseURL, id, data) {
   const fullURL = `${baseURL}/${id}`
-  // ?
+
  await fetch(fullURL, {
    method: 'PUT',
    mode: 'cors',
