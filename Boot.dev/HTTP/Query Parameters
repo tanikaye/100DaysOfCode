@@ -9,3 +9,5 @@ async function getUsers(url, apiKey) {
   })
   return response.json()
 }
+
+const baseURL = 'https://api.boot.dev/v1/courses_rest_api/learn-http/users'
