@@ -9,4 +9,5 @@ async function deleteUser(baseURL, id, apiKey) {
     },
     body: JSON.stringify(id)
 })
+
 }
