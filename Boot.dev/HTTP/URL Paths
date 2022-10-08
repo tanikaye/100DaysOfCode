@@ -1,7 +1,7 @@
 async function getResources(path) {
   const fullURL = `https://api.boot.dev`
 
-  const response = await fetch(fullURL, {
+  const response = await fetch(fullURL + path, {
     method: 'GET',
     mode: 'cors',
     headers: {
