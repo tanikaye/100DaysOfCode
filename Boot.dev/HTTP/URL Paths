@@ -1,0 +1,14 @@
+async function getResources(path) {
+  const fullURL = `https://api.boot.dev`
+
+  const response = await fetch(fullURL, {
+    method: 'GET',
+    mode: 'cors',
+    headers: {
+      'X-API-Key': generateKey(),
+      'Content-Type': 'application/json'
+    }
+  })
+  const resources = await response.json()
+  return resources
+}
