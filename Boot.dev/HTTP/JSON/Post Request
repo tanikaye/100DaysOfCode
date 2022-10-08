@@ -1,5 +1,4 @@
 async function createCharacter(apiKey, url, data) {
-  // ?
   const result = await fetch(url, {
   method: 'POST',
   mode: 'cors',
