@@ -1,0 +1,11 @@
+async function getUsers(url, apiKey) {
+  const fullURL = `${url}`
+  const response = await fetch(fullURL + '?sort=level', {
+    method: 'GET',
+    mode: 'cors',
+    headers: {
+      'X-API-Key': apiKey
+    }
+  })
+  return response.json()
+}
