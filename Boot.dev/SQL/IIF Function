@@ -1,0 +1,4 @@
+select *,
+IIF(was_successful is true,
+'No action required', 'Perform an audit') as audit
+from transactions
