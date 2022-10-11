@@ -1,0 +1,3 @@
+select * from users
+inner join countries
+on users.country_code = countries.country_code
