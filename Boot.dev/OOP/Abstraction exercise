@@ -31,7 +31,6 @@ class Human:
     def __use_sprint_stamina(self):
         self.__stamina -= 1
 
-    # -- TEST SUITE, DONT TOUCH BELOW THIS LINE --
 
     def move_right(self):
         self.__pos_x += self.__speed
