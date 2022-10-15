@@ -26,9 +26,6 @@ class Dragon(Unit):
                 print(f'{unit.name} is hit by the fire')
 
 
-# -- TEST SUITE, DONT TOUCH BELOW THIS LINE --
-
-
 def main():
     print("Creating an army of generic units")
     units = [
