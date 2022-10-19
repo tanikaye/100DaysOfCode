@@ -1,0 +1,5 @@
+def find_min(nums):
+    minimum = float('inf')
+    for num in nums:
+        minimum = min(minimum, num)
+    return minimum
