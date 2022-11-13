@@ -4,7 +4,6 @@ var search = function(nums, target) {
     let mid = Math.floor((right+left)/2)
 
     while(left <= right){
-        console.log(left, right, mid)
         if(nums[mid] === target){
             return mid
         }
